@@ -1,0 +1,168 @@
+/* --------------------------------------- DESKTOP --------------------------------------- */
+
+/* --------------------------------------- page --------------------------------------- */
+
+body {
+    font-family: 'TT Moons Trial';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Ashbury W01 Regular";
+    margin:0;
+}
+
+p {
+    line-height: 1.04;
+}
+
+/* --------------------------------------- header --------------------------------------- */
+
+.header {
+    display: flex;
+    flex: 40 50;
+    gap: 5dvw;
+    height: 80dvh;
+    margin: 10vh 10vw 10vh 10vw;
+}
+
+.logo {
+    height: 90%;
+    align-self: center;
+}
+
+.headline {
+    font-size: 5dvw;
+    align-self: center;
+    font-weight: bold;
+}
+
+
+/* --------------------------------------- Sections --------------------------------------- */
+
+.section-title {
+    color: #ce322b;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+    text-align: center;
+}
+
+/* --------------------------------------- Concept Section --------------------------------------- */
+
+.concept-section {
+    display:flex;
+    background-color:#fbf6f3;
+}
+
+.concept-content {
+    display: flex;
+    flex-direction:column;
+    margin: 10vh 10vw 10vh 10vw;
+    font-size: clamp(1.5rem, 2.5rem, 4.5rem);
+    text-align: center;
+    gap:50px;
+}
+
+/* --------------------------------------- Prestation Section --------------------------------------- */
+
+.prestations-section {
+    display:flex;
+    background-color:#ffffff;
+}
+
+.prestations-content {
+    display: flex;
+    flex-direction:column;
+    margin: 10vh 10vw 10vh 10vw;
+    font-size: clamp(0.5rem, 1rem, 2rem);
+    text-align: center;
+    gap:50px;
+}
+
+.prestations-grid-1 {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: fit-content;
+}
+
+.prestations-grid-2 {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.prestations-elements {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: fit-content;
+}
+
+.product-image {
+    height: 40%;
+    border-radius: 50%;
+}
+
+/* --------------------------------------- Valeurs Section --------------------------------------- */
+
+.valeurs-section {
+    display:flex;
+    background-color:#ffffff;
+}
+
+.valeurs-content {
+    display: flex;
+    flex-direction:column;
+    margin: 10vh 10vw 10vh 10vw;
+    font-size: clamp(1rem, 2rem, 3.5rem);
+    gap:50px;
+    width: 100%;
+}
+
+.valeurs-list {
+    text-align: left;
+}
+
+.citation {
+    text-align: right;
+}
+
+.citation-content {
+    color:#ce322b;
+}
+
+.citation-name {
+    color:#000000;
+}
+
+/* --------------------------------------- Secteur Section --------------------------------------- */
+
+.secteur-section {
+    display:flex;
+    background-color:#fbf6f3;
+}
+
+.secteur-content {
+    display: flex;
+    flex-direction:column;
+    margin: 10vh 10vw 10vh 10vw;
+    font-size: clamp(1rem, 2rem, 3.5rem);
+    text-align: left;
+    gap:50px;
+    width: 100%;
+}
+
+/* --------------------------------------- Contact Section --------------------------------------- */
+
+.contact-section {
+    display:flex;
+    background-color:#ffffff;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction:column;
+    margin: 10vh 10vw 10vh 10vw;
+    font-size: clamp(1rem, 2rem, 3.5rem);
+    text-align: left;
+    gap:50px;
+    width: 100%;
+}
