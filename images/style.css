@@ -1,0 +1,530 @@
+/* --------------------------------------- DESKTOP --------------------------------------- */
+
+/* --------------------------------------- page --------------------------------------- */
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    margin: 0 10dvw 2dvh 10dvw;
+    box-sizing: border-box;
+    color: #333;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 1.04;
+    margin:0;
+}
+
+/* --------------------------------------- header --------------------------------------- */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100%;
+}
+
+.logo {
+    height: 70dvh;
+    width: auto;
+    max-width: 90vw;
+}
+
+
+/* --------------------------------------- Sections --------------------------------------- */
+
+.section-title {
+    font-family: 'TT Moons Trial';
+    color: #ce322b;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+    text-align: center;
+    margin:7dvh 0 7dvh 0;
+}
+
+img {
+    filter: grayscale(100%);
+    transition: filter 5s ease; 
+}
+
+img.color {
+    filter: grayscale(0%);
+}
+
+/* --------------------------------------- Welcome Section --------------------------------------- */
+
+.welcome-section {
+    background-color:#f4f3f1;
+    width: calc(100% + 20dvw);
+    margin: 2dvh auto auto -10dvw;
+    padding: 1dvh 0 5dvh 0;
+}
+
+.welcome-text {
+    display:flex;
+    flex-direction: column;
+    margin: 0 10dvw 0 10dvw;
+    text-align: center;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+}
+
+.welcome-text .headline {
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+}
+
+/* --------------------------------------- Who Section --------------------------------------- */
+
+.who-section {
+    margin: 2dvh auto auto 0;
+    padding: 1dvh 0 5dvh 0;
+}
+
+.who-grid {
+    display: flex;
+    gap: 5%;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    height:80dvh;
+}
+
+.who-text {
+    flex: 0 1 calc(55%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    font-style: italic;
+    font-size:clamp(0.1rem, 1.2rem, 1.2rem);
+}
+
+.signature {
+    font-style: normal;
+    margin-top: 2dvh;
+    text-align: right;
+    font-size:clamp(1vh, 2.8vh, 5vh);
+}
+
+.who-frame {
+    flex: 0 1 calc(40%); /* ou un ratio qui correspond à ta photo */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    border: 3px solid #333;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+
+.who-frame .who-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* --------------------------------------- product Section --------------------------------------- */
+
+.product-section {
+    background-color:#f4f3f1;
+    width: calc(100% + 20dvw);
+    margin: 2dvh auto auto -10dvw;
+    padding: 1dvh 0 5dvh 0;
+}
+
+.product-headline {
+    display:flex;
+    flex-direction: column;
+    margin: 0 10dvw 4dvh 10dvw;
+    text-align: center;
+    font-size:clamp(1vh, 3vh, 5vh);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3%;
+    row-gap: 3dvh;
+    padding:0 10dvw;
+}
+
+.product-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    text-align: center;
+    margin: 1.5dvh 0 1.5dvh 0; 
+    padding: 1.5dvh 0 1.5dvh 0; 
+    gap: 2.5dvh;
+    border-radius: 30px;
+    font-size: clamp(1rem, 1.2rem, 3rem);
+    position: relative;
+    overflow: hidden;
+    --product-hover-alpha: 0.7;  /* Contrôle de l'alpha (0 = transparent, 1 = opaque) */
+    transition: transform 1s ease-in-out, filter 1s ease, border-radius 1s ease;
+}
+
+.product-elements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, var(--product-hover-alpha)), rgba(255, 255, 255, var(--product-hover-alpha))), url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    z-index: -1;
+}
+
+.product-elements:hover {
+    filter: hue-rotate(15deg) saturate(1.1);
+    transform: scale(1.02);
+}
+
+.product-elements:hover::before {
+    opacity: 1;
+}
+
+.product-title {
+    font-weight: bold;
+    margin:0;
+}
+
+.product-frame {
+    width: 40%;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #333;
+    box-sizing: border-box;
+}
+
+.product-frame .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 0;
+}
+
+.product-content {
+    margin:0 3dvw 0 3dvw;
+}
+
+/* --------------------------------------- Whyme Section --------------------------------------- */
+
+.whyme-section {
+    margin: 2dvh auto auto 0;
+    padding: 1dvh 0 5dvh 0;
+}
+
+.whyme-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.whyme-grid {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.whyme-frame {
+    flex: 0 0 15%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #333;
+}
+
+.whyme-frame .whyme-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-radius: 10px;
+}
+
+.whyme-text {
+    flex: 1 1 75%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(1rem, 1.2rem, 3rem);
+    text-align:justify;
+}
+
+/* --------------------------------------- Contact Section --------------------------------------- */
+
+.contact-section {
+    background-color:#f4f3f1;
+    width: calc(100% + 20dvw);
+    margin: 2dvh auto auto -10dvw;
+    padding: 1dvh 0 5dvh 0;
+}
+
+.contact-frame {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    overflow:hidden;
+    border-radius: 50%;
+    border: 3px solid #333;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contact-frame .contact-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.contact-content {
+    display:flex;
+    flex-direction: column;
+    margin: 2dvh 10dvw 2dvh 10dvw;
+    text-align: center;
+    gap:3dvh;
+    font-size:clamp(1vh, 3vh, 5vh);
+}
+
+.phone-text, .mail-text {
+    font-weight: bold;
+}
+
+/* --------------------------------------- Prestations Popup --------------------------------------- */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 80dvw;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    max-height: 80dvh;        /* Limite la hauteur du contenu */
+    overflow-y: auto;         /* Active le scroll vertical si dépassement */
+    overflow-x: hidden;       /* Cache le scroll horizontal */
+}
+
+.modal-close {
+    position: absolute;
+    top: 1dvh;
+    right: 1dvw;
+    border: none;
+    background: transparent;
+    font-size: clamp(0.5rem, 1.5rem, 3rem);
+    cursor: pointer;
+}
+
+.modal-title {
+    color: #ce322b;
+    margin-top: 0;
+}
+
+.modal-description {
+    margin-top: 1dvh;
+    color: #333;
+}
+
+.modal-list {
+    list-style: disc inside;
+    margin: 2dvh 0;
+    padding-left: 1dvw;
+    color: #333;
+}
+
+.modal-list li {
+    margin-bottom: 2dvh;
+}
+
+.modal-price {
+    margin-top: 2dvh;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.1rem, 1.3rem);
+    color: #333;
+}
+
+.modal-price li {
+    margin-bottom: 2dvh;
+    margin-left: 2dvw;
+}
+
+.modal-outro-1 {
+    font-size: clamp(0.2rem, 0.7rem, 1rem);
+    font-style: italic;
+    color: #666;
+    margin-top: 5dvh;
+}
+
+.modal-outro-2 {
+    font-size: clamp(0.2rem, 0.7rem, 1rem);
+    font-style: italic;
+    color: #666;
+}
+
+/* --------------------------------------- Footer --------------------------------------- */
+
+.page-footer {
+    background-color: #ffffff;
+    padding: 2dvh;
+    color: #333;
+    margin-top: 4dvh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex: 1;
+}
+
+.footer-logo {
+    width: clamp(0.3rem, 6rem, 6rem);
+    height: auto;
+    flex-shrink: 0;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: clamp(0.3rem, 1rem, 1rem);
+}
+
+.footer-title {
+    font-weight: bold;
+    color:#ce322b;
+}   
+
+.footer-right {
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------- Réseaux sociaux ---------- */
+
+.social-links {
+    display: flex;
+    gap: 1.5dvw;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-icon {
+    width: 3dvw;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* ------- Hyperliens ---------- */
+
+a {
+    color: #333;
+    text-decoration: none;  }
+
+a:visited {
+    color: #333; 
+}
+
+a:hover {
+    color: #ce322b; 
+}
+
+a:active {
+    color: #333;
+}
+
+/* --------------------------------------- Mentions Légales Popup --------------------------------------- */
+
+.legal-content {
+    color: #333;
+    line-height: 1.8;
+    max-height: 60dvh;
+    overflow-y: auto;
+}
+
+.legal-content h3 {
+    margin-top: 1.5dvh;
+    margin-bottom: 0.75dvh;
+    color: #ce322b;
+    font-size: clamp(0.3rem, 1rem, 3rem);
+}
+
+.legal-content p {
+    margin: 0.75dvh 0;
+    font-size: clamp(0.3rem, 1rem, 3rem);
+}
+
+.legal-content a {
+    color: #ce322b;
+    text-decoration: none;
+}
+
+.legal-content a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------- Responsive Design --------------------------------------- */
