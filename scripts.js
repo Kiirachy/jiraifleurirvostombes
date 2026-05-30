@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = modal.querySelector('.modal-title');
     const modalList = modal.querySelector('.modal-list');
     const modalDescription = modal.querySelector('.modal-description');
-    const modalPrice = modal.querySelector('.modal-price');
+    const modalPrice = modal.querySelector('.modal-price-2');
     const closeBtn = modal.querySelector('.modal-close');
 
 cards.forEach(card => {
@@ -51,7 +51,7 @@ cards.forEach(card => {
         const listItems = (card.dataset.modalList || '').split(';').filter(Boolean);
         modalList.innerHTML = listItems.map(item => `<li>${item.trim()}</li>`).join('');
         
-        // Pour modalPrice (nouveau : traité comme liste)
+        // Pour modalPrice-2
         const priceItems = (card.dataset.modalPrice || '').split(';').filter(Boolean);
         modalPrice.innerHTML = priceItems.map(item => `<li>${item.trim()}</li>`).join('');
         

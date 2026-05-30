@@ -25,13 +25,18 @@ p {
     justify-content: center;
     align-items: center;
     height: 100dvh;
-    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    height: 80dvh;
+  }
 }
 
 .logo {
-    height: 70dvh;
-    width: auto;
-    max-width: 90vw;
+    max-height: 80dvh;
+    max-width: 80dvw;
+    aspect-ratio: 1/1;
 }
 
 
@@ -41,9 +46,15 @@ p {
     font-family: 'TT Moons Trial';
     color: #ce322b;
     font-weight: bold;
-    font-size: clamp(1rem, 1.5rem, 3rem);
+    font-size:1.5rem;
     text-align: center;
-    margin:7dvh 0 7dvh 0;
+    margin:0 0 5dvh 0;
+}
+
+@media screen and (max-width: 900px) {
+  .section-title {
+    margin:0 0 3dvh 0;
+  }
 }
 
 img {
@@ -60,75 +71,121 @@ img.color {
 .welcome-section {
     background-color:#f4f3f1;
     width: calc(100% + 20dvw);
-    margin: 2dvh auto auto -10dvw;
-    padding: 1dvh 0 5dvh 0;
+    margin: 0 0 0 -10dvw;
+    padding: 5dvh 0 5dvh 0;
+}
+
+@media screen and (max-width: 900px) {
+  .welcome-section {
+    padding:3dvh 0 3dvh 0;
+  }
 }
 
 .welcome-text {
     display:flex;
     flex-direction: column;
-    margin: 0 10dvw 0 10dvw;
+    margin: 0 12dvw 0 12dvw;
     text-align: center;
-    font-size: clamp(1rem, 1.5rem, 3rem);
+    font-size: 1.2rem;
 }
 
 .welcome-text .headline {
     font-weight: bold;
-    font-size: clamp(1rem, 1.5rem, 3rem);
+    font-size: 1.2rem;
 }
 
 /* --------------------------------------- Who Section --------------------------------------- */
 
 .who-section {
     margin: 2dvh auto auto 0;
-    padding: 1dvh 0 5dvh 0;
+    padding: 5dvh 0 5dvh 0;
+}
+
+@media screen and (max-width: 900px) {
+  .who-section {
+    padding:3dvh 0 3dvh 0;
+  }
 }
 
 .who-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: calc(55%) calc(40%);
     gap: 5%;
-    align-items: stretch;
-    flex-wrap: wrap;
-    width: 100%;
-    height:80dvh;
+    max-height: 80dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .who-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap:1dvh;
+    }
 }
 
 .who-text {
-    flex: 0 1 calc(55%);
     display: flex;
     flex-direction: column;
+    max-height: 100%;
     justify-content: center;
     text-align: justify;
     font-style: italic;
-    font-size:clamp(0.1rem, 1.2rem, 1.2rem);
+    font-size: clamp(0.6dvw, 1.2dvw, 1.8dvw);
+}
+
+@media (max-width: 900px) {
+    .who-text {
+        order: 2;
+        font-size: 1.2dvh;
+    }
 }
 
 .signature {
     font-style: normal;
-    margin-top: 2dvh;
+    margin-top: 1dvh;
     text-align: right;
-    font-size:clamp(1vh, 2.8vh, 5vh);
+    font-size: clamp(0.6dvw, 1.2dvw, 1.8dvw);
+}
+
+@media (max-width: 900px) {
+    .signature {
+        font-size: 1.2dvh;
+    }
 }
 
 .who-frame {
     flex: 0 1 calc(40%); /* ou un ratio qui correspond à ta photo */
-    height: 100%;
+    height: 90%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    border-radius: 10%;
     align-items: center;
-    border-radius: 60px;
+    justify-content: center;
     border: 3px solid #333;
-    box-sizing: border-box;
     margin: 0;
     overflow: hidden;
 }
+
+@media (max-width: 900px) {
+    .who-frame {
+        order: 1;
+    }
+}
+
 
 .who-frame .who-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    display: block;
+}
+
+@media (max-width: 900px) {
+    .who-frame {
+        width: 50%;
+        height: auto;
+    }
 }
 
 /* --------------------------------------- product Section --------------------------------------- */
@@ -136,16 +193,22 @@ img.color {
 .product-section {
     background-color:#f4f3f1;
     width: calc(100% + 20dvw);
-    margin: 2dvh auto auto -10dvw;
-    padding: 1dvh 0 5dvh 0;
+    margin: 0 0 0 -10dvw;
+    padding: 5dvh 0 5dvh 0;
+}
+
+@media screen and (max-width: 900px) {
+  .product-section {
+    padding:3dvh 0 3dvh 0;
+  }
 }
 
 .product-headline {
     display:flex;
     flex-direction: column;
-    margin: 0 10dvw 4dvh 10dvw;
+    margin: 0 20dvw 4dvh 20dvw;
     text-align: center;
-    font-size:clamp(1vh, 3vh, 5vh);
+    font-size: 1.2rem;
 }
 
 .product-grid {
@@ -154,6 +217,13 @@ img.color {
     column-gap: 3%;
     row-gap: 3dvh;
     padding:0 10dvw;
+}
+
+@media screen and (max-width: 900px) {
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .product-elements {
@@ -166,7 +236,7 @@ img.color {
     padding: 1.5dvh 0 1.5dvh 0; 
     gap: 2.5dvh;
     border-radius: 30px;
-    font-size: clamp(1rem, 1.2rem, 3rem);
+    font-size: 1.2rem;
     position: relative;
     overflow: hidden;
     --product-hover-alpha: 0.7;  /* Contrôle de l'alpha (0 = transparent, 1 = opaque) */
@@ -228,39 +298,55 @@ img.color {
 /* --------------------------------------- Whyme Section --------------------------------------- */
 
 .whyme-section {
-    margin: 2dvh auto auto 0;
-    padding: 1dvh 0 5dvh 0;
+    padding: 5dvh 0 5dvh 0;
 }
 
-.whyme-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+@media screen and (max-width: 900px) {
+  .whyme-section {
+    padding:3dvh 0 3dvh 0;
+  }
 }
 
 .whyme-grid {
     display: flex;
     align-items: center;
-    gap: 5%;
+    gap: 3rem;
     flex-wrap: wrap;
     width: 100%;
 }
 
+@media screen and (max-width: 900px) {
+  .whyme-grid {
+    flex-direction: column;
+  }
+}
+
 .whyme-frame {
-    flex: 0 0 15%;
+    flex: 0 0 10rem;
     aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 3px solid #333;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .whyme-frame .whyme-image {
+    flex-direction: column;
+  }
 }
 
 .whyme-frame .whyme-image {
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: top;
     display: block;
-    border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .whyme-frame .whyme-image {
+    flex-direction: column;
+  }
 }
 
 .whyme-text {
@@ -269,8 +355,14 @@ img.color {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: clamp(1rem, 1.2rem, 3rem);
+    font-size: 1.2rem;
     text-align:justify;
+}
+
+@media screen and (max-width: 900px) {
+  .whyme-text {
+    text-align: center;
+  }
 }
 
 /* --------------------------------------- Contact Section --------------------------------------- */
@@ -278,12 +370,18 @@ img.color {
 .contact-section {
     background-color:#f4f3f1;
     width: calc(100% + 20dvw);
-    margin: 2dvh auto auto -10dvw;
-    padding: 1dvh 0 5dvh 0;
+    margin: 0 0 0 -10dvw;
+    padding: 5dvh 0 5dvh 0;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-section {
+    padding:3dvh 0 3dvh 0;
+  }
 }
 
 .contact-frame {
-    width: 15%;
+    width: 10rem;
     aspect-ratio: 1 / 1;
     overflow:hidden;
     border-radius: 50%;
@@ -305,10 +403,10 @@ img.color {
 .contact-content {
     display:flex;
     flex-direction: column;
-    margin: 2dvh 10dvw 2dvh 10dvw;
+    margin: 0dvh 10dvw 0 10dvw;
     text-align: center;
-    gap:3dvh;
-    font-size:clamp(1vh, 3vh, 5vh);
+    gap:2dvh;
+    font-size:1.2rem;
 }
 
 .phone-text, .mail-text {
@@ -356,7 +454,7 @@ img.color {
     right: 1dvw;
     border: none;
     background: transparent;
-    font-size: clamp(0.5rem, 1.5rem, 3rem);
+    font-size:1.5rem;
     cursor: pointer;
 }
 
@@ -372,36 +470,38 @@ img.color {
 
 .modal-list {
     list-style: disc inside;
-    margin: 2dvh 0;
-    padding-left: 1dvw;
     color: #333;
 }
 
 .modal-list li {
-    margin-bottom: 2dvh;
+    margin-bottom: 1dvh;
 }
 
-.modal-price {
-    margin-top: 2dvh;
+.modal-price-1 {
+    margin-top: 2rem;
     font-weight: bold;
-    font-size: clamp(1rem, 1.1rem, 1.3rem);
+    font-size:1.1rem;
     color: #333;
 }
 
-.modal-price li {
-    margin-bottom: 2dvh;
-    margin-left: 2dvw;
+.modal-price-2 {
+    list-style: disc inside;
+    color: #333;
+}
+
+.modal-price-2 li {
+    margin-bottom: 1dvh;
 }
 
 .modal-outro-1 {
-    font-size: clamp(0.2rem, 0.7rem, 1rem);
+    font-size: 0.8rem;
     font-style: italic;
     color: #666;
-    margin-top: 5dvh;
+    margin-top: 0.5rem;
 }
 
 .modal-outro-2 {
-    font-size: clamp(0.2rem, 0.7rem, 1rem);
+    font-size: 0.8rem;
     font-style: italic;
     color: #666;
 }
@@ -432,9 +532,13 @@ img.color {
 }
 
 .footer-logo {
-    width: clamp(0.3rem, 6rem, 6rem);
-    height: auto;
+    display: block;
+    max-height: 8%;
+    max-width: 8%;
+    aspect-ratio: 1/1;
     flex-shrink: 0;
+    object-position: center;
+    object-fit: cover;
 }
 
 .footer-info {
@@ -444,7 +548,7 @@ img.color {
 
 .footer-info p {
     margin: 0;
-    font-size: clamp(0.3rem, 1rem, 1rem);
+    font-size: clamp(0.3rem, 1rem, 1.7rem);
 }
 
 .footer-title {
@@ -510,12 +614,12 @@ a:active {
     margin-top: 1.5dvh;
     margin-bottom: 0.75dvh;
     color: #ce322b;
-    font-size: clamp(0.3rem, 1rem, 3rem);
+    font-size: clamp(0.3rem, 1rem, 1.7rem);
 }
 
 .legal-content p {
     margin: 0.75dvh 0;
-    font-size: clamp(0.3rem, 1rem, 3rem);
+    font-size: clamp(0.3rem, 1rem, 1.7rem);
 }
 
 .legal-content a {
