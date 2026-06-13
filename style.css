@@ -206,7 +206,7 @@ img.color {
 .product-headline {
     display:flex;
     flex-direction: column;
-    margin: 0 20dvw 4dvh 20dvw;
+    margin: 0 15.5dvw 4dvh 15.5dvw;
     text-align: center;
     font-size: 1.2rem;
 }
@@ -250,7 +250,7 @@ img.color {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, var(--product-hover-alpha)), rgba(255, 255, 255, var(--product-hover-alpha))), url('images/background.jpg');
+    background-image: url('images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -260,12 +260,11 @@ img.color {
 }
 
 .product-elements:hover {
-    filter: hue-rotate(15deg) saturate(1.1);
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .product-elements:hover::before {
-    opacity: 1;
+    opacity: 70%;
 }
 
 .product-title {
@@ -292,7 +291,7 @@ img.color {
 }
 
 .product-content {
-    margin:0 3dvw 0 3dvw;
+    margin:0 5dvw 0 5dvw;
 }
 
 /* --------------------------------------- Whyme Section --------------------------------------- */
