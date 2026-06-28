@@ -19,15 +19,23 @@
         <img class="logo" src="images\logo.png" alt="logo">
     </header>
 
+    <!-- Menu Section -->
+    <menu class="menu">
+        <p class="menu-element" data-section="welcome" tabindex="0" role="button">ACCUEIL</p>
+        <p class="menu-element" data-section="who" tabindex="0" role="button">À PROPOS</p>
+        <p class="menu-element" data-section="product" tabindex="0" role="button">SERVICES</p>
+        <p class="menu-element" data-section="whyme" tabindex="0" role="button">VALEURS</p>
+        <p class="menu-element" data-section="contact" tabindex="0" role="button">CONTACT</p>
+    </menu>
+
     <!-- welcome section -->
     <section id="welcome" class="welcome-section">
         <div class="welcome-content">
             <h1 id="welcome" class="section-title">ACCUEIL</h1>
             <div class="welcome-text">
-                <p class="headline">Maintenir le lien, malgré l'absence.</p><br>
-                <p>L’absence ne devrait jamais effacer le souvenir ni rompre le lien. Entretenir une sépulture, c’est continuer
-                    à aimer autrement. C’est aussi une réponse pour celles et ceux qui vivent loin, manquent de mobilité ou
-                    pour qui l’émotion rend la démarche trop difficile.
+                <p class="headline">« Il y a quelque chose de plus fort que la mort, c’est la présence des absents dans la mémoire des vivants.»</p><br>
+                <p>J. d’Ormesson</p><br>
+                <p>La mémoire permet aux absents de demeurer parmi nous. Quand elle s’efface, notre histoire se fragilise. Entretenir une sépulture, c’est continuer à aimer autrement. C’est aussi une réponse pour celles et ceux qui vivent loin, manquent de mobilité ou pour qui l’émotion rend la démarche trop difficile.
                 </p><br>
                 <p>Installée au cœur de l’Hérault, J’irai fleurir vos tombes est une micro-entreprise locale qui intervient sur
                     l’ensemble du département pour entretenir, restaurer, fleurir et végétaliser les sépultures avec soin, respect et délicatesse.</p>
@@ -76,7 +84,7 @@
             <h1 class="section-title">QUELS SERVICES ?</h1>
             <div class="product-headline">
                 <p>
-                    Dans un esprit de continuité, de respect et de discretion, chaque intervention est pensée
+                    Dans un esprit de continuité, de respect et de discrétion, chaque intervention est pensée
                     comme un geste de présence envers vos proches disparus. <br><br>
                     Je prends soin des sépultures comme d’un lieu de mémoire
                     vivant : nettoyage, entretien, fleurissement, végétalisation et restauration sont réalisés avec attention et précision, pour
@@ -91,24 +99,23 @@
                         <img class="product-image" src="images\entretien.png" alt="entretien">
                         <div class="product-overlay">
                             <button class="product-variant" data-product-variant="ponctuel">Ponctuel</button>
-                            <button class="product-variant" data-product-variant="mensuel">Mensuel</button>
-                            <button class="product-variant" data-product-variant="bimestriel">Bimestriel</button>
-                            <button class="product-variant" data-product-variant="4-saisons">4 saisons</button>
+                            <button class="product-variant" data-product-variant="régulier">Régulier</button>
                         </div>
                     </div>
-                    <p class="product-content">Nettoyage complet de la sépulture et remise en état soignée</p>
+                    <p class="product-content">Nettoyage complet et remise en état soignée de la sépulture </p>
                 </div>
 
-                <div class="product-elements" data-product-family="végétalisation">
-                    <h2 class="product-title">La Végétalisation</h2>
+                <div class="product-elements" data-product-family="végétal">
+                    <h2 class="product-title">Le Végétal</h2>
                     <div class="product-frame">
-                        <img class="product-image" src="images\vegetalisation.png" alt="vegetalisation">
+                        <img class="product-image" src="images\vegetal.png" alt="vegetal">
                         <div class="product-overlay">
+                            <button class="product-variant" data-product-variant="bouquet">Bouquet</button>
                             <button class="product-variant" data-product-variant="fleurissement">Fleurissement</button>
-                            <button class="product-variant" data-product-variant="végétalisation durable">Végétalisation durable</button>
+                            <button class="product-variant" data-product-variant="végétalisation">Végétalisation</button>
                         </div>
                     </div>
-                    <p class="product-content">Dépôt de bouquets ou végétalisation travaillée de la sépulture</p>
+                    <p class="product-content">Achat et dépôt de fleurs, installation ou aménagement floral</p>
                 </div>
 
                 <div class="product-elements" data-product-family="restauration">
@@ -118,24 +125,29 @@
                         <div class="product-overlay">
                             <button class="product-variant" data-product-variant="sépultures en pierre">Sépultures en Pierre</button>
                             <button class="product-variant" data-product-variant="plaques funéraires">Plaques Funéraires</button>
+                            <button class="product-variant" data-product-variant="éléments métalliques">Élements Métalliques</button>
                         </div>
                     </div>
-                    <p class="product-content">Redonne un éclat durable à des sépultures en pierre et plaques funéraires</p>
+                    <p class="product-content">Nettoyage et réparation de ce qui dure, pour redonner un éclat durable</p>
                 </div>
 
-                <div class="product-elements" data-product-family="accompagnement">
-                    <h2 class="product-title">L'Accompagnement</h2>
+                <div class="product-elements" data-product-family="soutien">
+                    <h2 class="product-title">Le Soutien</h2>
                     <div class="product-frame">
                         <img class="product-image" src="images\accompagnement.png" alt="accompagnement">
                         <div class="product-overlay">
-                            <button class="product-variant" data-product-variant="visite speciale">Visite Spéciale</button>
+                            <button class="product-variant" data-product-variant="accompagner l'entourage">Accompagner l'Entourage</button>
                             <button class="product-variant" data-product-variant="mémorial numérique">Mémorial Numérique</button>
                         </div>
                     </div>
-                    <p class="product-content">Entretien d'un lien personnalisé dans le temps (à venir)</p>
+                    <p class="product-content">Entretien d'un lien personnalisé dans le temps</p>
                 </div>
-
-            </div>  
+            </div> 
+            <div class="product-bottomline">
+                <p>
+                Chaque sépulture est unique. Mes tarifs sont établis sur devis gratuit, après étude de l’état de la tombe et des souhaits de la famille.
+                </p>
+            </div> 
         </div>
     </section>
 
@@ -193,6 +205,8 @@
         </div>
     </footer>
 
+    <button class="scroll-to-top-btn" id="scrollToTopBtn" type="button" aria-label="Retour en haut de page">↑</button>
+
     <!-- Popup Mentions Légales -->
     <div class="modal" id="legal-popup">
         <div class="modal-content">
@@ -229,11 +243,14 @@
         <p class="modal-description"></p>
         <div class="modal-body"></div>
         <div class="modal-gallery" aria-label="Galerie photos de la prestation">
-            <button class="gallery-arrow gallery-prev" type="button" aria-label="Photo précédente">‹</button>
-            <div class="gallery-image-wrapper">
-                <img class="gallery-image" src="" alt="Galerie photo de la prestation">
+            <div class="gallery-stage">
+                <button class="gallery-arrow gallery-prev" type="button" aria-label="Photo précédente">‹</button>
+                <div class="gallery-image-wrapper">
+                    <img class="gallery-image" src="" alt="Galerie photo de la prestation">
+                </div>
+                <button class="gallery-arrow gallery-next" type="button" aria-label="Photo suivante">›</button>
             </div>
-            <button class="gallery-arrow gallery-next" type="button" aria-label="Photo suivante">›</button>
+            <p class="gallery-caption"></p>
         </div>
         <p class="modal-outro">Chaque sépulture est unique. Mes tarifs sont établis sur devis gratuit, après étude de l’état de la tombe et des souhaits de la famille.</p>
     </div>

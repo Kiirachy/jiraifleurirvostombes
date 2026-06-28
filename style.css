@@ -39,6 +39,66 @@ p {
     aspect-ratio: 1/1;
 }
 
+/* --------------------------------------- menu --------------------------------------- */
+
+.menu {
+    font-family: 'TT Moons Trial';
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;  
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 20dvw 5dvh 20dvw;
+}
+
+.menu-element:hover {
+    color: #ce322b;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+/* --------------------------------------- Bouton retour en haut --------------------------------------- */
+
+.scroll-to-top-btn {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 1000;
+    border: none;
+    border-radius: 999px;
+    width: 3rem;
+    height: 3rem;
+    background-color: #ce322b;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #fff;
+    color:#ce322b
+}
+
+.scroll-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 900px) {
+    .scroll-to-top-btn {
+        right: 1rem;
+        bottom: 1rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+}
 
 /* --------------------------------------- Sections --------------------------------------- */
 
@@ -311,7 +371,10 @@ p {
 
 .product-variant {
     border: none;
+    background: #fff;
+    border-radius: 2px;
     background: #ce322b;
+    border:#5f1713 2px solid;
     color: #fff;
     padding: 0.8rem 1.2rem;
     border-radius: 999px;
@@ -324,7 +387,9 @@ p {
 .product-variant:hover,
 .product-variant:focus {
     transform: translateY(-2px);
-    opacity: 0.95;
+    background: #fff;
+    border:#5f1713 2px solid;
+    color: #ce322b;
 }
 
 @media screen and (max-width: 900px) {
@@ -341,6 +406,15 @@ p {
 
 .product-content {
     margin:0 5dvw 0 5dvw;
+}
+
+.product-bottomline {
+    display:flex;
+    flex-direction: column;
+    margin: 4dvh 15.5dvw 4dvh 15.5dvw;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
 /* --------------------------------------- Whyme Section --------------------------------------- */
@@ -544,18 +618,46 @@ p {
     line-height: 1.7;
 }
 
+.modal-body p + p {
+    margin-top: 0.75rem;
+}
+
+.modal-body ul {
+    margin: 0.75rem 0 0 1.25rem;
+    padding: 0;
+}
+
+.modal-body li {
+    margin-bottom: 0.35rem;
+}
+
+.modal-sub-title {
+    margin-top: 0.9rem;
+    color: #333;
+    font-weight: bold;
+}
+
 .modal-gallery {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-stage {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1.5rem;
+    width: 100%;
 }
 
 .gallery-image-wrapper {
     width: 100%;
     max-width: 30rem;
-    max-height: 30vh;
+    max-height: 50vh;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -569,8 +671,15 @@ p {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 30vh;
+    max-height: 50vh;
     display: block;
+}
+
+.gallery-caption {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #5b5b5b;
 }
 
 .gallery-arrow {
