@@ -29,15 +29,17 @@ p {
 
 @media screen and (max-width: 900px) {
   .header {
-    height: 80dvh;
+    height: 60dvh;
   }
 }
 
 .logo {
-    max-height: 80dvh;
-    max-width: 80dvw;
+    max-height: 85%;
+    max-width: 85%;
     aspect-ratio: 1/1;
 }
+
+
 
 /* --------------------------------------- menu --------------------------------------- */
 
@@ -45,15 +47,22 @@ p {
     font-family: 'TT Moons Trial';
     color: #333;
     font-size: 1rem;
-    font-weight: bold;  
+    font-weight: bold; 
+    flex-wrap: wrap;
     display:flex;
     text-align: center;
     justify-content: space-between;
     padding: 0 20dvw 5dvh 20dvw;
 }
 
+@media screen and (max-width: 900px) {
+  .menu {
+    display:none;
+  }
+}
+
 .menu-element:hover {
-    color: #ce322b;
+    color: #466b2e;
     border-radius: 999px;
     cursor: pointer;
 }
@@ -69,7 +78,7 @@ p {
     border-radius: 999px;
     width: 3rem;
     height: 3rem;
-    background-color: #ce322b;
+    background-color: #466b2e;
     color: #fff;
     font-size: 1.3rem;
     cursor: pointer;
@@ -82,7 +91,7 @@ p {
 
 .scroll-to-top-btn:hover {
     background-color: #fff;
-    color:#ce322b
+    color:#466b2e
 }
 
 .scroll-to-top-btn.show {
@@ -104,7 +113,7 @@ p {
 
 .section-title {
     font-family: 'TT Moons Trial';
-    color: #ce322b;
+    color: #466b2e;
     font-weight: bold;
     font-size:1.5rem;
     text-align: center;
@@ -154,7 +163,7 @@ p {
 
 @media screen and (max-width: 900px) {
   .who-section {
-    padding:3dvh 0 3dvh 0;
+    padding: 3dvh 0 3dvh 0;
   }
 }
 
@@ -162,7 +171,7 @@ p {
     display: grid;
     grid-template-columns: calc(55%) calc(40%);
     gap: 5%;
-    max-height: 80dvh;
+    height: 80dvh;
     justify-content: center;
     align-items: center;
 }
@@ -171,24 +180,40 @@ p {
     .who-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        gap:1dvh;
+        height: auto;
+        gap:5dvh;
+        max-height: fit-content;
     }
 }
 
 .who-text {
     display: flex;
     flex-direction: column;
-    max-height: 100%;
+    font-size: clamp(12px, 1.2vw, 40px);
     justify-content: center;
     text-align: justify;
     font-style: italic;
-    font-size: clamp(0.6dvw, 1.2dvw, 1.8dvw);
 }
 
 @media (max-width: 900px) {
     .who-text {
+        display:none;
+    }
+}
+
+.who-text-mobil {
+    display:none;
+}
+
+@media (max-width: 900px) {
+    .who-text-mobil {
         order: 2;
-        font-size: 1.2dvh;
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(15px, 1.5vw, 40px);
+        justify-content: center;
+        text-align: justify;
+        font-style: italic;
     }
 }
 
@@ -196,19 +221,32 @@ p {
     font-style: normal;
     margin-top: 1dvh;
     text-align: right;
-    font-size: clamp(0.6dvw, 1.2dvw, 1.8dvw);
+    font-size: clamp(12px, 1.2vw, 40px);
 }
 
 @media (max-width: 900px) {
     .signature {
-        font-size: 1.2dvh;
+        display:none;
+    }
+}
+
+.signature-mobil {
+    display:none;
+}
+
+@media (max-width: 900px) {
+    .signature-mobil {
+        display:block;
+        font-style: normal;
+        margin-top: 1dvh;
+        text-align: right;
+        font-size: clamp(15px, 1.5vw, 40px);
     }
 }
 
 .who-frame {
     flex: 0 1 calc(40%); /* ou un ratio qui correspond à ta photo */
-    height: 90%;
-    width: 100%;
+    height: 80dvh;
     display: flex;
     border-radius: 10%;
     align-items: center;
@@ -221,9 +259,9 @@ p {
 @media (max-width: 900px) {
     .who-frame {
         order: 1;
+        height: 50dvh;
     }
 }
-
 
 .who-frame .who-image {
     width: 100%;
@@ -233,9 +271,8 @@ p {
 }
 
 @media (max-width: 900px) {
-    .who-frame {
-        width: 50%;
-        height: auto;
+    .who-frame .who-image {
+        object-position: center;
     }
 }
 
@@ -373,8 +410,8 @@ p {
     border: none;
     background: #fff;
     border-radius: 2px;
-    background: #ce322b;
-    border:#5f1713 2px solid;
+    background: #466b2e;
+    border:#314a20 2px solid;
     color: #fff;
     padding: 0.8rem 1.2rem;
     border-radius: 999px;
@@ -388,15 +425,14 @@ p {
 .product-variant:focus {
     transform: translateY(-2px);
     background: #fff;
-    border:#5f1713 2px solid;
-    color: #ce322b;
+    border:#314a20 2px solid;
+    color: #466b2e;
 }
 
 @media screen and (max-width: 900px) {
     .product-overlay {
         opacity: 1;
         pointer-events: auto;
-        background: rgba(255, 255, 255, 0.98);
     }
     .product-elements:hover .product-image,
     .product-elements:focus-within .product-image {
@@ -440,6 +476,7 @@ p {
 @media screen and (max-width: 900px) {
   .whyme-grid {
     flex-direction: column;
+    gap: 1.5rem;
   }
 }
 
@@ -483,9 +520,26 @@ p {
 
 @media screen and (max-width: 900px) {
   .whyme-text {
-    text-align: center;
+    display:none;
   }
 }
+
+.whyme-text-mobil {
+    display:none;
+}
+
+@media screen and (max-width: 900px) {
+  .whyme-text-mobil {
+    flex: 1 1 75%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align:center;
+  }
+}
+
 
 /* --------------------------------------- Contact Section --------------------------------------- */
 
@@ -544,11 +598,23 @@ p {
     align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .social-links {
+    gap: 7dvw;
+  }
+}
+
 .social-icon {
     width: 3dvw;
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .social-icon {
+    width: 12dvw;
+  }
 }
 
 .social-icon:hover {
@@ -602,7 +668,7 @@ p {
 }
 
 .modal-title {
-    color: #ce322b;
+    color: #466b2e;
     margin-top: 0;
 }
 
@@ -684,7 +750,7 @@ p {
 
 .gallery-arrow {
     border: none;
-    background: #ce322b;
+    background: #466b2e;
     color: #fff;
     width: 3rem;
     height: 3rem;
@@ -695,13 +761,13 @@ p {
 }
 
 .gallery-arrow:hover {
-    background: #b82c27;
+    background: #466b2e;
 }
 
 .gallery-arrow:disabled {
     opacity: 0.35;
     cursor: default;
-    background: rgba(206, 50, 43, 0.35);
+    background: #314a20;
 }
 
 .modal-outro {
@@ -741,7 +807,7 @@ a:visited {
 }
 
 a:hover {
-    color: #ce322b; 
+    color: #466b2e; 
 }
 
 a:active {
@@ -760,7 +826,7 @@ a:active {
 .legal-content h3 {
     margin-top: 1.5dvh;
     margin-bottom: 0.75dvh;
-    color: #ce322b;
+    color: #466b2e;
     font-size: clamp(0.3rem, 1rem, 1.7rem);
 }
 
@@ -770,7 +836,7 @@ a:active {
 }
 
 .legal-content a {
-    color: #ce322b;
+    color: #466b2e;
     text-decoration: none;
 }
 

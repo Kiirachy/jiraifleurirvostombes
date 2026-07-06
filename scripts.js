@@ -203,9 +203,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fleurissement: { 
                 title: "Le Fleurissement des sépultures", 
-                description: "TBC", 
+                description: "Une présence colorée, pensée pour durer et accompagner le souvenir au fil des saisons.", 
                 content: [
-                    "TBC"
+                    {
+                        type: 'paragraph',
+                        text: 'Je fleuris les pots et jardinières avec des plantes choisies pour leur tenue, leur résistance et l’harmonie qu’elles apportent au monument.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Les préférences de chaque famille sont respectées. Lorsque les choix ne sont pas arrêtés, je vous guide vers des végétaux adaptés aux conditions du lieu et à l’esprit de la sépulture. Chaque composition est pensée pour créer un décor végétal équilibré, durable et égayer la sépulture avec délicatesse.'
+                    }
                 ], 
                 gallery: [
                     'images/vegetal_gallery/fleurissement/Choix des matériaux, achat et transport.jpg',
@@ -256,7 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 ],
                 gallery: [
-                    'images/vegetal_gallery/vegetalisation/image à venir.jpg'
+                    'images/vegetal_gallery/vegetalisation/Mesures préparatoires.jpg',
+                    'images/vegetal_gallery/vegetalisation/Plus d’images à venir.jpg'
                 ] }
         },
 
