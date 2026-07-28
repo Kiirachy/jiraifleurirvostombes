@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ponctuel: {
                 title: "L'Entretien ponctuel",
-                description: "Un entretien ponctuel de la sépulture, en deux passages",
+                description: "Un entretien ponctuel de la sépulture",
                 content: [
                     {
                         type: 'paragraph',
@@ -154,11 +154,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             régulier: { 
                 title: "L'Entretien régulier", 
-                description: "Un entretien régulier sur mesure, en deux passages", 
+                description: "Un entretien régulier sur mesure", 
                 content: [                    
                     {
                         type: 'paragraph',
-                        text: 'Chacune de mes interventions suit une méthodologie structurée, assurant un entretien complet, respectueux des matériaux et conforme aux bonnes pratiques du secteur funéraire. Voici les étapes de l’intervention :'
+                        text: 'Chaque sépulture mérite une attention adaptée. Je vous propose un suivi personnalisé avec une fréquence d’intervention sur mesure : 2, 4, 6, 8 ou 12 passages par an, selon vos attentes et les besoins du lieu de mémoire. Chaque intervention suit le même protocole de soin qu’un entretien ponctuel (voir le détail ci-dessous).'
                     },
                     {
                         type: 'list',
